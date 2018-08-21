@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en"  data-ng-app="app">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Trintals</title>
+    <meta name="title" content=""/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="application-name" content="Trintals"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content="Trintals"/>
+    <meta name="theme-color" content="#4C7FF0"/>
+    <base href="/angular/" />
+    <link href="libs/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/pace-theme-minimal.css" rel="stylesheet" />
+    <link rel="stylesheet" href="javascript:" id="load_styles_before"/>
+</head>
+<body data-ng-controller="AppCtrl as main">   
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" ui-sref="home"> {{ main.app.name }}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="page1">Page 1</a>
+          </li>
+          <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="page2">Page 2</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div ui-view></div>
+    <script type="text/javascript">
+        window.paceOptions = {
+            document: true,
+            eventLag: true,
+            restartOnPushState: true,
+            restartOnRequestAfter: true,
+            ajax: {
+                trackMethods: ['POST', 'GET']
+            }
+        };
+    </script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/pace.min.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+    <script src="libs/angular-sanitize.js"></script>
+    <script src="libs/angular-touch.min.js"></script>
+    <script src="libs/ui-bootstrap-tpls-3.0.3.min.js"></script>
+    <script src="libs/ocLazyLoad.min.js"></script>
+    <script src="libs/fastclick.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/routes.js"></script>
+</body>
+</html>
