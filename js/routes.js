@@ -10,7 +10,7 @@
         },
     ]).config(function ($stateProvider, $urlRouterProvider, $qProvider, $locationProvider) {
         if (window.history && window.history.pushState) {
-            $locationProvider.html5Mode(true);
+            $locationProvider.html5Mode(false);
         }
         $qProvider.errorOnUnhandledRejections(false);
         $urlRouterProvider.otherwise('/home');
